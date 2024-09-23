@@ -1,0 +1,10 @@
+<!-- <button type="button" class="btn btn-primary">Hello</button> -->
+ 
+ <div class="container">
+  <h2>Parent component</h2>
+  <hr>
+  <br>
+  <!-- <app-child [childInputMessage] = "message"></app-child> -->
+<!-- <app-child [studentsList]="students"></app-child> -->
+<app-child (childOutput)="onDataLoadFromChild($event)"></app-child>
+</div>

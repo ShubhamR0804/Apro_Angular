@@ -1,0 +1,28 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Task</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todos">
+        <td>{{ todo.id }}</td>
+        <td>{{ todo.task }}</td>
+        <td>{{ todo.completed ? 'Completed' : 'Incomplete' }}</td>
+        <td>
+          <!-- Toggle button text and class based on completion status -->
+          <button
+            [ngClass]="todo.completed ? 'btn btn-primary' : 'btn btn-warning mx-3'"
+            (click)="markComplete(todo.id)"
+          >
+            {{ todo.completed ? 'Incomplete' : 'Complete' }}
+          </button>
+          <button class="btn btn-danger" (click)="deleteTodo(todo.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

@@ -1,0 +1,56 @@
+<!-- <button type="button" class="btn btn-primary">Primary</button> -->
+<!-- Interpolation  -->
+
+<h1>Welcome {{ user | json }}</h1>
+
+<!-- <h1>Welcome {{getUserName()}}</h1> -->
+
+<!-- 2.Property Binder -->
+
+<a [href]="link">Link to google using property binder </a>
+<br />
+<img
+  [src]="imageUrl"
+  [width]="imageWidth"
+  [height]="imageHeight"
+  alt="image not loading"
+/>
+<br /><br /><br />
+<input
+  type="button"
+  [disabled]="disabled"
+  class="btn btn-primary"
+  value="disabled button"
+/>
+
+<!-- 3.Event Binding -->
+<br />
+<br />
+<br />
+<button (click)="showAlert()" type="button" class="btn btn-primary">
+  Alert!
+</button>
+<br /><br /><br />
+<!-- local reference  -->
+<!-- <input type="text" #box>
+<button (click)="addText(box)"  type="button" class="btn btn-primary">Add</button>
+
+<div>{{value}}</div> -->
+
+<!-- Add in div right after entering in the text box -->
+<!-- <input type="text" #box1 (keydown.enter)="onAddText(box1)" />
+<div>{{ value }}</div> -->
+<!-- <input type="text" #box>
+<button (click)="add(box)"  type="button" class="btn btn-primary">Add</button>
+<button (click)="subtract(box)" type="button" class="btn btn-secondary">Subtract</button>
+<div>{{value}}</div> -->
+<input type="text" #box [value]="num">
+<button (click)="add(box)" type="button" class="btn btn-primary">Add</button>
+<button (click)="subtract(box)" type="button" class="btn btn-secondary">Subtract</button>
+<button (click)="reset()" type="button" class="btn btn-danger">Reset</button>
+<div>{{num}}</div>
+
+<input type="text" #box2>
+<button (click)="addText" type="button" ></button>
+
+

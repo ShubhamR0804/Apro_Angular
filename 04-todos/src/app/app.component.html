@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <app-input (add)="addTask($event)"></app-input>
+    </div>
+  </div>
+  
+  <div class="row mt-5">
+    <div class="col-md-8 offset-md-2">
+      <app-display 
+        [todos]="todos" 
+        [completedTasks]="completedTasks"
+        (markAsCompleted)="markAsCompleted($event)"
+        (deleteTask)="deleteTask($event)"
+      ></app-display>
+    </div>
+  </div>
+</div>

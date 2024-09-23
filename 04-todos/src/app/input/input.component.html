@@ -1,0 +1,7 @@
+<h2 class="text-center">Input Task</h2>
+<div class="input-group input-group-lg mb-3">
+  <input  type="text" class="form-control" placeholder="Enter task name" #taskInput>
+  <div class="input-group-append">
+    <button type="button" class="btn btn-primary" (click)="addTask(taskInput.value); taskInput.value = ''">Add Task</button>
+  </div>
+</div>

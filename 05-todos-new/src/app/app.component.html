@@ -1,0 +1,9 @@
+<div class="container my-5">
+  <app-input (taskOutputEvent)="addEventToList($event)"></app-input>
+  <hr />
+  <!-- Pass the todos array to the display component -->
+  <app-display [todos]="todos" 
+               (displayEmitter)="markComplete($event)" 
+               (deleteTodoEvent)="handleDelete($event)">
+  </app-display>
+</div>
